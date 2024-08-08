@@ -45,7 +45,6 @@ class FileUploadView(APIView):
         serializer = CVSerializer(data=request.data)
         if serializer.is_valid():
             file = serializer.validated_data['cv']
-            # Save the file or process it as needed
             return Response(status=204)
         else:
             return Response(serializer.errors, status=400)

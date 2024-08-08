@@ -57,9 +57,9 @@ function Home() {
       .catch((err) => alert(err));
   };
 
-  const deleteApplicantDetails = (id) => {
+  const deleteApplicantDetails = () => {
     api
-      .delete(`/api/applicantdetails/delete/${id}/`)
+      .delete(`/api/applicantdetails/delete/`)
       .then((res) => {
         if (res.status === 204) alert("Details successfully deleted!");
         else alert("Error, failed to delete details!");
