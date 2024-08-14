@@ -1,4 +1,5 @@
 import React from "react";
+import "../styles/ApplicantDetails.css";
 
 function ApplicantDetails({ applicantdetails, onDelete }) {
 

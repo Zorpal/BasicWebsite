@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../api";
 import ApplicantDetails from "../components/Details";
+import "../styles/Home.css";
 
 // FileUpload Component
 const FileUpload = () => {

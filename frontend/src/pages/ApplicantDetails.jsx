@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import api from "../api";
 
+
 function Details() {
   const [applicantDetails, setApplicantDetails] = useState([]);
   const [FullName, setFullName] = useState("");
