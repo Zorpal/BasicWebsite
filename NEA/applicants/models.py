@@ -1,7 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import User
 class ApplicantDetails(models.Model):
-    userid = models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     fullname = models.CharField(max_length=50, null=False)
     email = models.EmailField(max_length=50, null=False)
     phonenumber = models.IntegerField()

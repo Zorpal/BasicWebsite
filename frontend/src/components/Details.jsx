@@ -1,6 +1,7 @@
 import React from "react";
 
 function ApplicantDetails({ applicantdetails, onDelete }) {
+
   return (
     <div className="details-container">
       <p className="details-fullname">{applicantdetails.fullname}</p>

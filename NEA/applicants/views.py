@@ -25,7 +25,7 @@ class UpdateApplicantDetails(generics.ListCreateAPIView):
         else:
             print(serializer.errors)
 
-class DeleteApplicantDetails(generics.ListCreateAPIView):
+class DeleteApplicantDetails(generics.DestroyAPIView):
     serializer_class = ApplicantSerializer
     permission_classes = [IsAuthenticated]
 

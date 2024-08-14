@@ -18,7 +18,7 @@ class ApplicantSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = ApplicantDetails
-        fields = ('fullname', 'email', 'phonenumber', 'skill_1', 'skill_2', 'skill_3', 'skill_4', 'skill_5', 'qualifications', 'preferences', 'cv')
+        fields = ('id', 'fullname', 'email', 'phonenumber', 'skill_1', 'skill_2', 'skill_3', 'skill_4', 'skill_5', 'qualifications', 'preferences', 'cv')
         
         
 class JobSerializer(serializers.ModelSerializer):
