@@ -85,10 +85,3 @@ class JobListings(models.Model):
     def __str__(self):
         return self.jobtitle
     
-class ApplicantLoginDetails(models.Model):
-    loginid = models.ForeignKey(User, on_delete=models.CASCADE, related_name="userid")
-    username = models.TextField(null=False)
-    password = models.TextField(null=False)
-
-    def __str__(self):
-        return self.username

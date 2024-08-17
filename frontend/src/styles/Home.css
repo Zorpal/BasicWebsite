@@ -2,37 +2,35 @@ div {
     font-family: Arial, sans-serif;
   }
   
-  /* Styles for the notes section */
-  .notes-section {
+
+  .applicantdetails-section {
     margin-bottom: 2rem;
   }
   
-  .notes-section h2 {
+  .applicantdetails-section h2 {
     color: #333;
     font-size: 24px;
   }
   
-  /* Styles for individual notes - assuming your Note component has some container element */
-  .note {
+
+  .applicantdetails {
     background-color: #f9f9f9;
-    border-left: 5px solid #007bff;
+    border-left: 5px solid #95d7e0;
     margin: 10px 0;
     padding: 10px 15px;
     border-radius: 5px;
   }
-  
-  /* Styles for the form section */
   form {
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(25, 245, 245, 0.1);
     max-width: 500px;
     margin: auto;
   }
   
   form h2 {
-    color: #333;
+    color: #000000;
     font-size: 24px;
     margin-bottom: 20px;
   }
@@ -59,9 +57,22 @@ div {
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
   }
   
   form input[type="submit"]:hover {
-    background-color: #0056b3;
+    background-color: #225b99;
+  
   }
+.logout-button {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.logout-button:hover {
+  background-color: #da190b;
+}

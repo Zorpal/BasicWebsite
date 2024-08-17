@@ -2,33 +2,7 @@ import { useState, useEffect } from "react";
 import api from "../api";
 import ApplicantDetails from "../components/Details";
 import "../styles/Home.css";
-
-// FileUpload Component
-const FileUpload = () => {
-  const [file, setFile] = useState(null);
-
-  const handleFileChange = (e) => {
-    setFile(e.target.files[0]);
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append("cv", file);
-
-    await fetch("/upload/", {
-      method: "POST",
-      body: formData,
-    });
-  };
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <input type="file" onChange={handleFileChange} />
-      <button type="submit">Upload CV</button>
-    </form>
-  );
-};
+import { useNavigate } from "react-router-dom";
 
 function Home() {
   const [applicantDetails, setApplicantDetails] = useState([]);
@@ -42,6 +16,7 @@ function Home() {
   const [skill_5, setskill_5] = useState("");
   const [qualifications, setqualifications] = useState("");
   const [preferences, setpreferences] = useState("");
+  const [cv, setcv] = useState("");
 
   useEffect(() => {
     getApplicantDetails();
@@ -59,7 +34,6 @@ function Home() {
   };
 
   const deleteApplicantDetails = (id) => {
-    console.log('deleting id: ', id)
     api
       .delete(`/api/applicantdetails/delete/${id}/`)
       .then((res) => {
@@ -84,6 +58,7 @@ function Home() {
         skill_5,
         qualifications,
         preferences,
+        
       })
       .then((res) => {
         if (res.status === 201) alert("Details updated!");
@@ -93,10 +68,17 @@ function Home() {
       .catch((err) => alert(err));
   };
 
+  const logout = () => {
+    localStorage.clear();
+    const navigate = useNavigate();
+    navigate("/login");
+  };
+
   return (
     <div>
       <div>
         <h2>Applicant Details</h2>
+
         {applicantDetails.map((applicantdetails) => (
           <ApplicantDetails
             applicantdetails={applicantdetails}
@@ -120,7 +102,7 @@ function Home() {
         <label htmlFor="email">Email:</label>
         <br />
         <input
-          type="text"
+          type="email"
           id="email"
           name="email"
           required
@@ -130,63 +112,119 @@ function Home() {
         <label htmlFor="phonenumber">Phone Number:</label>
         <br />
         <input
-          type="text"
+          type="tel"
           id="phonenumber"
           name="phonenumber"
           required
+          pattern="^(\+\d{2})?\s?\d{10}$"
           onChange={(e) => setphonenumber(e.target.value)}
           value={phonenumber}
         />
         <label htmlFor="skill_1">Skill 1:</label>
         <br />
-        <input
-          type="text"
+        <select
           id="skill_1"
           name="skill_1"
           required
           onChange={(e) => setskill_1(e.target.value)}
           value={skill_1}
-        />
+        >
+          <option value="">Select a skill</option>
+          <option value="Problem-Solving">Problem-Solving</option>
+          <option value="Leadership">Leadership</option>
+          <option value="Time-Management">Time-Management</option>
+          <option value="Communication">Communication</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Adaptability">Adaptability</option>
+          <option value="Creativity">Creativity</option>
+          <option value="Empathy">Empathy</option>
+          <option value="Negotiation">Negotiation</option>
+          <option value="Critical-Thinking">Critical-Thinking</option>
+        </select>
         <label htmlFor="skill_2">Skill 2:</label>
         <br />
-        <input
-          type="text"
+        <select
           id="skill_2"
           name="skill_2"
           required
           onChange={(e) => setskill_2(e.target.value)}
           value={skill_2}
-        />
+        >
+          <option value="">Select a skill</option>
+          <option value="Problem-Solving">Problem-Solving</option>
+          <option value="Leadership">Leadership</option>
+          <option value="Time-Management">Time-Management</option>
+          <option value="Communication">Communication</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Adaptability">Adaptability</option>
+          <option value="Creativity">Creativity</option>
+          <option value="Empathy">Empathy</option>
+          <option value="Negotiation">Negotiation</option>
+          <option value="Critical-Thinking">Critical-Thinking</option>
+        </select>
         <label htmlFor="skill_3">Skill 3:</label>
         <br />
-        <input
-          type="text"
+        <select
           id="skill_3"
           name="skill_3"
           required
           onChange={(e) => setskill_3(e.target.value)}
           value={skill_3}
-        />
+        >
+          <option value="">Select a skill</option>
+          <option value="Problem-Solving">Problem-Solving</option>
+          <option value="Leadership">Leadership</option>
+          <option value="Time-Management">Time-Management</option>
+          <option value="Communication">Communication</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Adaptability">Adaptability</option>
+          <option value="Creativity">Creativity</option>
+          <option value="Empathy">Empathy</option>
+          <option value="Negotiation">Negotiation</option>
+          <option value="Critical-Thinking">Critical-Thinking</option>
+        </select>
         <label htmlFor="skill_4">Skill 4:</label>
         <br />
-        <input
-          type="text"
+        <select
           id="skill_4"
           name="skill_4"
           required
           onChange={(e) => setskill_4(e.target.value)}
           value={skill_4}
-        />
+        >
+          <option value="">Select a skill</option>
+          <option value="Problem-Solving">Problem-Solving</option>
+          <option value="Leadership">Leadership</option>
+          <option value="Time-Management">Time-Management</option>
+          <option value="Communication">Communication</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Adaptability">Adaptability</option>
+          <option value="Creativity">Creativity</option>
+          <option value="Empathy">Empathy</option>
+          <option value="Negotiation">Negotiation</option>
+          <option value="Critical-Thinking">Critical-Thinking</option>
+        </select>
         <label htmlFor="skill_5">Skill 5:</label>
         <br />
-        <input
-          type="text"
+        <select
           id="skill_5"
           name="skill_5"
           required
           onChange={(e) => setskill_5(e.target.value)}
           value={skill_5}
-        />
+        >
+          <option value="">Select a skill</option>
+          <option value="Problem-Solving">Problem-Solving</option>
+          <option value="Leadership">Leadership</option>
+          <option value="Time-Management">Time-Management</option>
+          <option value="Communication">Communication</option>
+          <option value="Collaboration">Collaboration</option>
+          <option value="Adaptability">Adaptability</option>
+          <option value="Creativity">Creativity</option>
+          <option value="Empathy">Empathy</option>
+          <option value="Negotiation">Negotiation</option>
+          <option value="Critical-Thinking">Critical-Thinking</option>
+        </select>
         <label htmlFor="Qualifications">Qualifications</label>
         <br />
         <input
@@ -206,11 +244,22 @@ function Home() {
           onChange={(e) => setpreferences(e.target.value)}
           value={preferences}
         />
+        <label htmlFor="cv">Upload a CV</label>
+        <br />
+        <input
+          type="file"
+          id="cv"
+          name="cv"
+          onChange={(e) => setcv(e.target.value)}
+          value={cv}
+        />
         <br />
         <input type="submit" value="Submit" />
       </form>
-      <h2>Upload CV</h2>
-      <FileUpload />
+
+      <button type="button" className="logout-button" onClick={logout}>
+        Logout
+      </button>
     </div>
   );
 }

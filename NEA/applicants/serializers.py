@@ -25,7 +25,5 @@ class JobSerializer(serializers.ModelSerializer):
     
     class Meta:
         model = JobListings
-        fields = ('jobid', 'jobtitle', 'companyname', 'salary', 'jobdescription', 'dateposted', 'deadline', 'location')
+        fields = ('id', 'jobtitle', 'companyname', 'salary', 'jobdescription', 'dateposted', 'deadline', 'location')
 
-class CVSerializer(serializers.Serializer):
-    cv = serializers.FileField()
