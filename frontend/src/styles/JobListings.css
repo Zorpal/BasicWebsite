@@ -1,0 +1,26 @@
+.job-container {
+    background-color: #f5f5f5;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .job-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .job-description {
+    margin-bottom: 10px;
+  }
+  
+  .job-location,
+  .job-dateposted,
+  .job-deadline,
+  .jobcompany,
+  .job-salary {
+    color: #666;
+    margin-bottom: 5px;
+  }

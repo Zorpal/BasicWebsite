@@ -3,76 +3,83 @@ div {
   }
   
 
+  .container {
+    max-width: 3840px;
+    margin: 0 auto;
+    padding: 15px;
+  }
+  
   .applicantdetails-section {
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
   }
   
   .applicantdetails-section h2 {
     color: #333;
     font-size: 24px;
+    margin-bottom: 1rem;
   }
-  
 
-  .applicantdetails {
-    background-color: #f9f9f9;
-    border-left: 5px solid #95d7e0;
-    margin: 10px 0;
-    padding: 10px 15px;
-    border-radius: 5px;
-  }
-  form {
-    background-color: #ffffff;
+  .form-container {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
+    background-color: #f5f5f5;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(25, 245, 245, 0.1);
-    max-width: 500px;
-    margin: auto;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   }
   
-  form h2 {
-    color: #000000;
-    font-size: 24px;
-    margin-bottom: 20px;
+  .form-group {
+    margin-bottom: 40px;
   }
   
-  form label {
+  .form-label {
+    display: block;
     font-weight: bold;
-    margin-top: 10px;
+    margin-bottom: 5px;
   }
   
-  form input,
-  form textarea {
+  .form-input {
     width: 100%;
-    padding: 8px;
-    margin: 8px 0 16px;
+    padding: 10px;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
   }
   
-  form input[type="submit"] {
+  .form-button {
+    display: block;
+    width: 20%;
+    padding: 10px;
+    margin-top: 100px;
     background-color: #007bff;
     color: white;
-    padding: 10px 20px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
-    font-size: 18px;
+    transition: background-color 0.3s;
   }
   
-  form input[type="submit"]:hover {
-    background-color: #225b99;
-  
+  .form-button:hover {
+    background-color: #0056b3;
   }
-.logout-button {
-  background-color: #f44336;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  cursor: pointer;
-  border-radius: 4px;
-}
 
-.logout-button:hover {
-  background-color: #da190b;
-}
+  .logout-button {
+    background-color: #f44336;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .logout-button:hover {
+    background-color: #da2a0b;
+  }
+  .header {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 10px;
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+  }

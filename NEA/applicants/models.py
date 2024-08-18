@@ -1,5 +1,8 @@
 from django.db import models
 from django.contrib.auth.models import User
+
+
+
 class ApplicantDetails(models.Model):
     id = models.AutoField(primary_key=True)
     fullname = models.CharField(max_length=50, null=False)
@@ -67,13 +70,13 @@ class ApplicantDetails(models.Model):
     ], null=False)
     qualifications = models.TextField(null=False)
     preferences = models.CharField(max_length=500, null=False)
-    cv = models.FileField(upload_to='cvs/', null=True)
+    cv = models.FileField(null=True, blank=True, upload_to='cvs/')
 
     def __str__(self):
         return self.fullname
 
 class JobListings(models.Model):
-    jobid = models.AutoField(primary_key=True)
+    id = models.AutoField(primary_key=True)
     jobtitle = models.CharField(max_length=50, null=False)
     companyname = models.CharField(max_length=50, null=False)
     salary = models.FloatField(null=False)
@@ -84,4 +87,5 @@ class JobListings(models.Model):
 
     def __str__(self):
         return self.jobtitle
+
     
