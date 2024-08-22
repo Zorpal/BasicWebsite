@@ -32,7 +32,7 @@ For _Windows users using Command Prompt_, Run the following commands:
    -   env\Scripts\Activate.bat
 
 **Installing required packages**
-(*Without a virtual environment*: Note that for macOS users and others in some cases, you will need to replace python, pip with python3, pip3. Venv removes the need for the 3!)
+(*Notice for those without a virtual environment*: Note that for macOS users and others in some cases, you will need to replace python, pip with python3, pip3. Venv removes the need for the 3!)
 
 Run the following command (Ensure you are in the first "NEA" folder which has the "requirements.txt" file:
   - pip install -r requirements.txt
