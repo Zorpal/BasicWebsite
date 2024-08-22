@@ -59,5 +59,6 @@ Afterwards, it will prompt you to login!
 To create a superuser in django which will automatically allow you to login to the website without registering, run the following command in the terminal that is navigated to the second "NEA" folder:
 
   - python manage.py createsuperuser
+
 Then follow the instructions to create one. A superuser has full administrator rights and will be able to edit users, edit applicant details and job listings all through the djangoadmin site hosted on "127.0.0.1/admin"
 
