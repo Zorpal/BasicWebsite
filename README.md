@@ -1,6 +1,6 @@
 Hi there, this repo contains my solution for the AQA Computer Science A-Level Coursework. This was made using a combination of Python, JavaScript, CSS and HTML; I developed my application in a Python virtual environment (venv) which is advisable to avoid any conflictions with any present systemwide packages. 
 
-**It is noted that my current version of axios has a high security vulnerability, which I am assessing the severity of how it affects my web app at the moment, though it doesnt seem to have major implications at this time.**
+
 
 **Installation instructions**
 
