@@ -7,7 +7,7 @@ Hi there, this repo contains my solution for the AQA Computer Science A-Level Co
 To clone my project into Visual Studio Code using source control:
 
  - Navigate to Source Control on the left toolbar, click on "Clone Repository"
- - Enter in the URL of this repo i.e "github.com/Zorpal/NEA"
+ - Enter in the URL of this repo i.e "github.com/Zorpal/BasicWebsite"
  - Choose a folder to clone the repo into
 To download the files through a terminal:
  - curl https://github.com/Zorpal/NEA/archive/refs/heads/main.zip
