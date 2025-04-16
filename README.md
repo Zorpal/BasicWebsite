@@ -1,4 +1,4 @@
-Hi there, this repo contains my solution for the AQA Computer Science A-Level Coursework. This was made using a combination of Python, JavaScript, CSS and HTML; I developed my application in a Python virtual environment (venv) which is advisable to avoid any conflictions with any present systemwide packages. 
+Hi there, this repo contains some basic code for a frontend-backend website, which was my prototype 1 for the AQA Computer Science A-Level Coursework. This was made using a combination of Python, JavaScript, CSS and HTML; I developed my application in a Python virtual environment (venv) which is advisable to avoid any conflictions with any present systemwide packages. 
 
 
 
@@ -10,8 +10,8 @@ To clone my project into Visual Studio Code using source control:
  - Enter in the URL of this repo i.e "github.com/Zorpal/BasicWebsite"
  - Choose a folder to clone the repo into
 To download the files through a terminal:
- - curl https://github.com/Zorpal/NEA/archive/refs/heads/main.zip
- - wget https://github.com/Zorpal/NEA/archive/refs/heads/main.zip
+ - curl https://github.com/Zorpal/BasicWebsite/archive/refs/heads/main.zip
+ - wget https://github.com/Zorpal/BasicWebsite/archive/refs/heads/main.zip
  - Extract the file using tar, unzip etc
 
 **Ensure you have Python and NodeJS installed on your system**
